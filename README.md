@@ -1,1 +1,3 @@
 # currencyfile
+
+A Currency Converter project in C++ is a simple application designed to convert amounts between different currencies based on real-time or pre-defined exchange rates. The project typically involves user input for the amount and the desired target currency, and it calculates the equivalent value using predefined exchange rates stored in the program. It demonstrates the use of fundamental C++ concepts such as variables, conditional statements, loops, and possibly file handling for storing and retrieving exchange rates. This project is ideal for beginners to practice basic programming skills and understand the real-world application of currency conversion.
