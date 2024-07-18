@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+void showMenu() {
+    cout << "Currency Converter\n";
+    cout << "1. USD to INR\n";
+    cout << "2. INR to USD\n";
+    cout << "3. EUR to INR\n";
+    cout << "4. INR to EUR\n";
+    cout << "5. Exit\n";
+}
+
+double convertCurrency(double amount, double rate) {
+    return amount * rate;
+}
+
+int main() {
+    int choice;
+    double amount;
+    const double USD_TO_INR = 74.50; // Example rate
+    const double INR_TO_USD = 1 / USD_TO_INR;
+    const double EUR_TO_INR = 87.20; // Example rate
+    const double INR_TO_EUR = 1 / EUR_TO_INR;
+
+    while (true) {
+        showMenu();
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == 5) {
+            cout << "Exiting the program.\n";
+            break;
+        }
+
+        cout << "Enter the amount: ";
+        cin >> amount;
+
+        switch (choice) {
+            case 1:
+                cout << amount << " USD = " << convertCurrency(amount, USD_TO_INR) << " INR\n";
+                break;
+            case 2:
+                cout << amount << " INR = " << convertCurrency(amount, INR_TO_USD) << " USD\n";
+                break;
+            case 3:
+                cout << amount << " EUR = " << convertCurrency(amount, EUR_TO_INR) << " INR\n";
+                break;
+            case 4:
+                cout << amount << " INR = " << convertCurrency(amount, INR_TO_EUR) << " EUR\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+                break;
+        }
+    }
+
+    return 0;
+}
